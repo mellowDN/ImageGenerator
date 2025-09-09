@@ -20,7 +20,7 @@ const CreatePost = () => {
     if(form.prompt){
       try{
         setGeneratingImg(true);
-        const response = await fetch('http://localhost:8080/api/v1/dalle', {
+        const response = await fetch('https://imagegenerator-qucc.onrender.com/api/v1/dalle', {
           method: 'POST',
           headers:{
             'Content-Type':'application/json',
@@ -52,7 +52,7 @@ const CreatePost = () => {
     setLoading(true);
     try {
       console.log("Submitting form:", form); // 🔍 Debug
-      const response = await fetch('http://localhost:8080/api/v1/post', {
+      const response = await fetch('https://imagegenerator-qucc.onrender.com/api/v1/post', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
